@@ -3,8 +3,9 @@ const app = express();
 
 app.set('view engine', 'pug');
 
-app.get('/', (req, res) =>{
+app.get('/', (req, res) => {
   console.log(req.connection.remoteAddress);
+  res.render('index');
 });
 
 app.listen(3000, () => {
